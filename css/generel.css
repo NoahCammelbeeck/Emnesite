@@ -220,6 +220,10 @@ li:hover {
   opacity: 0.4;
 }
 
+.tekst_pic > p {
+  margin: 25px;
+}
+
 .sheet_present {
   border: rgb(81, 101, 73, 0.68) solid;
   border-radius: 6px;
