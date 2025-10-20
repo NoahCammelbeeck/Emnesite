@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sir Byron Hogbert</title>
+    <link rel="stylesheet" href="css/generel.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/character_sheet.css" />
+    <link rel="stylesheet" href="css/burger.css" />
+
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+  </head>
+
+  <body>
+    <header>
+      <a class="logo" href="index.html">Trionien</a>
+      <div>
+        <a class="header_button" href="general_behelit.html">info</a>
+        <a class="header_button" href="character_select.html">spillerne</a>
+      </div>
+    </header>
+    <a class="tilbage" href="character_select.html">Tilbage</a>
+    <main>
+      <h1>Sir Byron Hogbert</h1>
+      <div class="character_sheet">
+        <div class="sheet_facts">
+          <div class="grid_1_1_1">
+            <img class="profile_pic" src="img/WEBG/sir_byron.webp" alt="Et billede af Sir Byron Hogbert" />
+            <p class="left_p">Spiller:</p>
+            <p class="right_p">Benjamin</p>
+            <p class="left_p">Level:</p>
+            <p class="right_p">6</p>
+            <p class="left_p">Class:</p>
+            <p class="right_p">Barbarian</p>
+            <p class="left_p">Species:</p>
+            <p class="right_p">Human</p>
+          </div>
+        </div>
+
+        <article class="window_stats">
+          <nav>
+            <ul class="menu">
+              <li><a href="sir_byron.html">Abilities</a></li>
+              <li><a href="sir_byron.html">Actions</a></li>
+              <li><a href="sir_byron.html">Inventory</a></li>
+              <li><a href="sir_byron.html">Opslagsark</a></li>
+              <li><a href="sir_byron.html">Proficiensies</a></li>
+              <li><a href="sir_byron.html">Spells</a></li>
+            </ul>
+            <button class="burger">
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+            </button>
+          </nav>
+          <h3>Abilities</h3>
+          <div class="statrow">
+            <div class="abilitybox">
+              <p>Strength</p>
+              <p>+4</p>
+              <p class="circled">19</p>
+            </div>
+            <div class="abilitybox">
+              <p>Dexterity</p>
+              <p>+1</p>
+              <p class="circled">13</p>
+            </div>
+            <div class="abilitybox">
+              <p>Constitution</p>
+              <p>+3</p>
+              <p class="circled">16</p>
+            </div>
+            <div class="abilitybox">
+              <p>Intelligence</p>
+              <p>0</p>
+              <p class="circled">10</p>
+            </div>
+            <div class="abilitybox">
+              <p>Wisdom</p>
+              <p>-1</p>
+              <p class="circled">9</p>
+            </div>
+            <div class="abilitybox">
+              <p>Charisma</p>
+              <p>-1</p>
+              <p class="circled">9</p>
+            </div>
+          </div>
+          <h3>Saving throws</h3>
+          <div class="statrow">
+            <div class="abilitybox2">
+              <p>Strength</p>
+              <p class="circled">+7</p>
+            </div>
+            <div class="abilitybox2">
+              <p>Dexterity</p>
+              <p class="circled">+1</p>
+            </div>
+            <div class="abilitybox2">
+              <p>Constitution</p>
+              <p class="circled">+6</p>
+            </div>
+            <div class="abilitybox2">
+              <p>Intelligence</p>
+              <p class="circled">0</p>
+            </div>
+            <div class="abilitybox2">
+              <p>Wisdom</p>
+              <p class="circled">-1</p>
+            </div>
+            <div class="abilitybox2">
+              <p>Charisma</p>
+              <p class="circled">-1</p>
+            </div>
+          </div>
+        </article>
+        <div class="sheet_facts2">
+          <div class="grid_1_1_1_2">
+            <div class="blueinfo">
+              <p>AC</p>
+              <p>13</p>
+            </div>
+            <div class="blueinfo">
+              <p>Init.</p>
+              <p>+6</p>
+            </div>
+            <div class="blueinfo">
+              <p>Speed</p>
+              <p>30 ft.</p>
+            </div>
+            <div class="blueinfo">
+              <p>Health</p>
+              <p>52/52</p>
+            </div>
+          </div>
+          <div class="terning">
+            <button class="rulterning" onclick="rollDice()">Rul terningen</button>
+            <label for="modifier">Vælg modifier (fx styrke +3):</label>
+            <input type="number" id="modifier" value="0" />
+            <br />
+
+            <div class="result" id="result"></div>
+
+            <script>
+              function rollDice() {
+                const roll = Math.floor(Math.random() * 20) + 1; // 1-20
+                const modifier = parseInt(document.getElementById("modifier").value);
+                const total = roll + modifier;
+
+                document.getElementById("result").innerHTML = `🎲 Du rullede: <b>${roll}</b> + ${modifier} = <b>${total}</b>`;
+              }
+            </script>
+          </div>
+        </div>
+        <article class="window_stats">
+          <div class="sheet_opslagsark">
+            <nav>
+              <ul class="menu">
+                <li><a href="ravos_soultender.html">Abilities</a></li>
+                <li><a href="ravos_soultender.html">Actions</a></li>
+                <li><a href="ravos_soultender.html">Inventory</a></li>
+                <li><a href="ravos_soultender.html">Opslagsark</a></li>
+                <li><a href="ravos_soultender.html">Proficiensies</a></li>
+                <li><a href="ravos_soultender.html">Spells</a></li>
+              </ul>
+              <button class="burger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+              </button>
+            </nav>
+            <nav>
+              <h3>Opslagsark</h3>
+              <ul class="ul_sheet">
+                <li><a href="ravos_soultender.html">De stjernefødte</a></li>
+                <li><a href="ravos_soultender.html">General Behelit</a></li>
+              </ul>
+            </nav>
+            <article class="sheet_opslagstekst">
+              <h4>General Behelit</h4>
+              <div>
+                <p>
+                  General Behelit er lederen af Den Hvide Høgs Hær, en skikkelse indhyllet i både ære og frygt. Hverken mand eller kvinde, men noget
+                  midt imellem, står Behelit som billedet på disciplin og styrke. På slagmarken rider generalen forrest med sværdet hævet, mens de
+                  hvide faner bæres af hæren bagved – høgens tegn, et symbol på skarphed, frihed og ubarmhjertig jagt.
+                </p>
+                <p>
+                  Mange frygter navnet, andre hvisker det som et løfte. For hæren er Behelit en uomgængelig sandhed: Den Hvide Høg svæver højt, og så
+                  længe generalen rider, findes der endnu håb om sejr.
+                </p>
+                <p>
+                  Behelit er mere end blot en militær leder. Rygter vil vide, at generalens vilje er bundet til en højere skæbne, og at øjnene altid
+                  hviler på himlen, som om svaret på deres kald findes blandt stjernerne. Alligevel er Behelit jordnær: hård mod fjenderne, men
+                  beskyttende over for sine soldater.
+                </p>
+              </div>
+            </article>
+          </div>
+          <script src="burgermenu.js"></script>
+        </article>
+      </div>
+    </main>
+    <footer>
+      <p class="underskrift">Af Noah Eduard Cammelbeeck-Bentzen</p>
+    </footer>
+    <script src="js/burgermenu.js  "></script>
+  </body>
+</html>

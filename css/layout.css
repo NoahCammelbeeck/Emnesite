@@ -1,0 +1,22 @@
+@media (width > 675px) {
+  .grid_2_1 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+  .sheet_present {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: start;
+  }
+
+  .character_flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  p {
+    max-width: 640px;
+  }
+}

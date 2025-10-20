@@ -1,0 +1,307 @@
+@font-face {
+  font-family: "quintessential";
+  src: url(../fonts/Quintessential/Quintessential-Regular.woff2);
+}
+
+@font-face {
+  font-family: "monsieur";
+  src: url(../fonts/Monsieur_La_Doulaise/MonsieurLaDoulaise-Regular.woff2);
+}
+
+@font-face {
+  font-family: "medieval";
+  src: url(../fonts/UnifrakturMaguntia/UnifrakturMaguntia-Regular.woff2);
+}
+
+@font-face {
+  font-family: "permanent";
+  src: url(../fonts/Permanent_Marker/PermanentMarker-Regular.woff2);
+}
+* {
+  margin: 0;
+  text-decoration: 0;
+  padding: 0;
+}
+
+a {
+  color: black;
+}
+
+body {
+  padding: 3px;
+  background-color: rgb(228, 220, 198);
+  min-width: 50px;
+  padding: 5px;
+  position: relative;
+  margin: 0;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../img/WEBG/parchment_3.webp") center/cover no-repeat;
+  opacity: 0.255; /* styrer gennemsigtigheden */
+  z-index: -1; /* bag alt indhold */
+}
+
+header {
+  display: grid;
+  grid-template-columns: 6fr 3fr;
+  margin-bottom: 10px;
+  position: sticky;
+  border-bottom: dashed rgb(81, 101, 73, 0.68) 2.5px;
+}
+
+header div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap; /* <- gør at de hopper ned på næste linje i stedet for at overlappe */
+}
+
+.logo {
+  font-family: "medieval";
+  font-size: 48px;
+  color: black;
+  transition: 0.2s;
+  display: block;
+  width: 170px;
+}
+.logo:hover {
+  /* opacity: 0.8; */
+  background-color: rgb(195, 60, 59);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+  border: none;
+  border-radius: 4px;
+}
+.header_button {
+  font-family: "medieval";
+  border: none;
+  border-radius: 2px;
+  background-color: rgb(103, 131, 93);
+  font-size: 20px;
+  color: rgb(228, 220, 198);
+  padding: 7px;
+  margin: 5px 5px 8px 30px;
+  justify-content: space-around;
+  transition: 0.15s;
+}
+.header_button:hover {
+  opacity: 0.8;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 7px;
+}
+
+h1 {
+  font-family: "permanent";
+  color: rgb(195, 60, 59);
+  text-align: center;
+}
+h2 {
+  font-family: "medieval";
+}
+
+h3 {
+  font-family: "permanent";
+  display: block;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+h4 {
+  font-family: "medieval";
+  color: rgb(195, 60, 59);
+  font-size: 24px;
+  margin-left: 15px;
+}
+
+h5 {
+  font-family: "medieval";
+  color: rgb(195, 60, 59);
+  font-size: 18px;
+}
+p {
+  font-family: "quintessential";
+  gap: 5px;
+  margin: 8px;
+}
+.grid_1_1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 20px;
+}
+
+.heroimage {
+  border: rgb(195, 60, 59) solid;
+  border-radius: 5px;
+}
+
+.overlay {
+  display: grid;
+}
+
+.overlay img {
+  grid-area: 1/1;
+  width: 100%;
+}
+
+.overlay h1 {
+  grid-area: 1/1;
+  place-self: center;
+}
+
+.overlay > * {
+  display: grid;
+}
+.cta1 {
+  color: black;
+  font-family: "medieval";
+  background-color: rgb(195, 60, 59);
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0px 5px 5px 0 rgba(0, 0, 0, 0.3);
+  font-size: 32px;
+  transition: 0.2s;
+  border-radius: 5px;
+  text-align: center;
+  display: block;
+}
+.cta1:hover {
+  opacity: 0.5;
+  box-shadow: 0px 7px 7px 0 rgba(0, 0, 0, 0.4);
+}
+
+.tilbage {
+  color: black;
+  font-family: "medieval";
+  background-color: rgb(195, 60, 59);
+  padding: 5px;
+  margin: 15px 0 15px 15px;
+  box-shadow: 0px 5px 5px 0 rgba(0, 0, 0, 0.3);
+  font-size: 24px;
+  transition: 0.2s;
+  border-radius: 5px;
+  text-align: center;
+  display: block;
+  width: 90px;
+}
+
+.tilbage:hover {
+  opacity: 0.5;
+  box-shadow: 0px 7px 7px 0 rgba(0, 0, 0, 0.4);
+}
+
+ul {
+  border: 2.5px dashed rgb(81, 101, 73, 0.68);
+  width: auto;
+  padding-left: 10px;
+  display: block;
+  width: 120px;
+  margin-bottom: 20px;
+}
+li {
+  font-family: "quintessential";
+  gap: 5px;
+  list-style-type: none;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  margin: 5px;
+  font-size: 18px;
+}
+
+li:hover {
+  opacity: 0.4;
+}
+
+.sheet_present {
+  border: rgb(81, 101, 73, 0.68) solid;
+  border-radius: 6px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  width: 380px;
+  /* width: 100%; */
+  background-color: rgba(245, 191, 31, 0.22);
+  margin: 6px auto;
+  height: 410px;
+}
+
+.character_info {
+  display: block;
+  border: rgb(81, 101, 73, 0.68);
+  margin: 5px 3px 8px 8px;
+}
+.present_sheet_img {
+  border: rgb(195, 60, 59, 0.68) solid;
+  border-radius: 8px;
+  height: 300px;
+  margin-right: 5px;
+  margin-top: 5px;
+  place-self: center;
+}
+.left_p {
+  font-family: "medieval";
+}
+.underskrift {
+  font-family: "monsieur";
+  text-align: right;
+}
+
+.name_select {
+  text-align: center;
+  grid-column: 2;
+  grid-row: 1;
+  margin-bottom: 25px;
+}
+
+.sheet_cta {
+  color: black;
+  font-family: "medieval";
+  background-color: rgb(195, 60, 59);
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0px 5px 5px 0 rgba(0, 0, 0, 0.3);
+  font-size: 32px;
+  transition: 0.2s;
+  border-radius: 5px;
+  grid-column: 1 / -1;
+  grid-row: 2;
+  width: 200px;
+  white-space: nowrap;
+}
+.sheet_cta:hover {
+  opacity: 0.5;
+  box-shadow: 0px 7px 7px 0 rgba(53, 2, 2, 0.4);
+}
+
+.tekst_pic {
+  border: 2px solid rgba(81, 101, 73, 0.68);
+  border-radius: 6px;
+  padding: 10px;
+  background-color: rgb(234, 205, 126);
+  margin: 10px;
+  overflow: auto; /* Sørger for at containeren omfavner floated indhold */
+  position: relative;
+}
+
+.opslagsark_img {
+  width: 250px;
+  border: 1px solid rgb(195, 60, 59);
+  border-radius: 5px;
+  float: left;
+  margin: 0 10px 10px 20px;
+  /* position: absolute; */
+  top: 10px; /* afstand fra toppen */
+  right: 10px; /* afstand fra højre */
+  max-width: 200px; /* så det ikke fylder hele kassen */
+  height: auto;
+  border: rgb(195, 60, 59, 0.68) solid;
+  border-radius: 8px;
+}
