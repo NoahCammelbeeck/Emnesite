@@ -42,7 +42,7 @@ body::before {
   position: absolute;
   inset: 0;
   background: url("../img/WEBG/parchment_3.webp") center/cover no-repeat;
-  opacity: 0.255; /* styrer gennemsigtigheden */
+  opacity: 0.275; /* styrer gennemsigtigheden */
   z-index: -1; /* bag alt indhold */
 }
 
@@ -107,6 +107,7 @@ h1 {
 }
 h2 {
   font-family: "medieval";
+  margin-left: 10px;
 }
 
 h3 {
@@ -133,6 +134,11 @@ p {
   gap: 5px;
   margin: 8px;
 }
+
+.grid_2_1 > article {
+  margin: 20px;
+}
+
 .grid_1_1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -203,9 +209,11 @@ ul {
   border: 2.5px dashed rgb(81, 101, 73, 0.68);
   width: auto;
   padding-left: 10px;
+  padding-right: 7px;
   display: block;
   width: 120px;
   margin-bottom: 20px;
+  margin-left: 15px;
 }
 li {
   font-family: "quintessential";
@@ -293,6 +301,8 @@ li:hover {
   margin: 10px;
   overflow: auto; /* Sørger for at containeren omfavner floated indhold */
   position: relative;
+  height: 620px;
+  max-width: 650px;
 }
 
 .opslagsark_img {
